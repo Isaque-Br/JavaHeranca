@@ -41,7 +41,7 @@ public class Account {
     } */
 
     public void withdraw(double amount) {           // METODO SACAR -
-        balance -= amount;                          // DESCONTA A QUANTIA DE SAQUE DO SALDO
+        balance -= amount + 5.0;                          // DESCONTA A QUANTIA DE SAQUE DO SALDO
     }
 
     public void deposit(double amount) {

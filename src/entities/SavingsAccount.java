@@ -24,4 +24,8 @@ public class SavingsAccount extends Account {   // HERDA TODOS OS MEMBROS DA CON
     public void updateBalance() {           // METODO QUE ATUALIZA O SALDO MAIS A TAXA DE JUROS
         balance += balance * interestRate;  // SALDO RECEBE ELE MESMO MAIS O SALDO MULTIPLICADO PELA TAXA(0,01) EX:
     }
+    @Override       // INFORMANDO O COMPILADOR QUE É UMA SOBREPOSIÇÃO
+    public void withdraw(double amount) {       // METODO DE SAQUE
+        balance -= amount;                      // SALDO DA CONTA - O SAQUE
+    }
 }

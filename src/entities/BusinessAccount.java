@@ -26,4 +26,9 @@ public class BusinessAccount extends Account {       // HERDANDO TODOS OS DADOS 
             balance += amount - 10.0;          // DEIXANDO O ATRIBUTO BALANCE EM PROTECTED E CONSEGUINDO ACESSA-LO ATRAVES DE SUBCLASS
         }                                      // PEGANDO O SALDO SOMANDO COM O EMPRETIMO - A TAXA
     }
+    @Override
+    public void withdraw(double amount) {
+        super.withdraw(amount);     // REUTILIZA A LOGICA DA SUPERCLASSE E
+        balance -= 2.0;             // ...ACRESCENTA UM DESCONTO ADCIONAL DE TAXA DO SAQUE
+    }
 }

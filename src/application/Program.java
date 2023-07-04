@@ -33,12 +33,17 @@ public class Program {
             System.out.println("Update");
         }
 
+        Account acc7 = new Account(1007, "Francisco", 1000.0);
+        acc7.withdraw(200.0);
+        System.out.println("Saldo da conta Francisco: R$" + acc7.getBalance());
 
+        Account acc8 = new SavingsAccount(1008, "Leonidas", 1000.0, 0.01);
+        acc8.withdraw(200.0);
+        System.out.println("Saldo conta Leonidas: R$" + acc8.getBalance());
 
-
-
-
-
+        Account acc9 = new BusinessAccount(1009, "Giovane", 1000.0, 500.0);
+        acc9.withdraw(200.0);
+        System.out.println("Saldo restante é de: R$" + acc9.getBalance());
 
 
 
