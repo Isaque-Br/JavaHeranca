@@ -45,8 +45,16 @@ public class Program {
         acc9.withdraw(200.0);
         System.out.println("Saldo restante é de: R$" + acc9.getBalance());
 
+        // INSTANCIA DUAS CONTAS, CADA UMA COM SALDO DE MIL, A CONTA X É CONTA COMUM, A Y É CONTA POUPANÇA
+        Account x = new Account(1020, "Alex", 1000.0);
+        Account y = new SavingsAccount(1023, "Joaquim", 1000.0, 0.01);
 
+        // POLIMORFISMO
+        x.withdraw(50.0);   // CHAMEI A MESMA OPERAÇÃO DE VARIAVEIS DO MESMO TIPO Account,
+        y.withdraw(50.0);   // ...COM COMPORTAMENTOS DIFERENTES
 
+        System.out.println("Saldo da conta do " + x.getHolder() + " é R$" + x.getBalance());
+        System.out.println("Saldo da conta do " + y.getHolder() + " é R$" + y.getBalance());
 
 
 

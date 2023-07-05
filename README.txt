@@ -34,7 +34,34 @@ _ É fortemente recomendável usar a anotação @Override em um método sobrescr
  - É possível chamar a iplementação da superclasse usando a palavra Super.
  - Exemplo: Suponha que na classe BusinessAccount, a regra para saque seja realizar o saque normalmente da superclasse descontar mais R$2.0
 
+___________________________________________________________________________________________________
 
+## Classes e métodos final ##
+    • Palavra chave: final
+    • Classe: evita que a classe seja herdada
+    Ex: public final class SavingAccount {  //
+    • Método: evita que o método seja sobreposto
+- Suponha que voce queira evitar que sejam criadas subclasses de SavingAccount
+public final class SavingAccount
 
+# Por que definimos classes e métodos como final? #
+    • Segurança: Dependendo das regras do negócio, às vezes é desejável garantir
+    que uma classe não seja herdada, ou que um método não seja sobreposto.
+    • Geralmente convém acrescentar Final em métodos sobrepostos, pois sobreposições multiplas podem ser uma porta
+    de entrada para inconsistencias.
+    • Performance: Atributos de tipo de uma classe final são analisados de forma mais
+    rápida em tempo de execução.../ final pode deixar o programa mais rapido
+    • Exemplo clássico: String
+________________________________________________________________________________________
 
+          ## Pilares da Programação a Objeto ##
+    • Polimorfismo
+ - Em Programação Orientada a Objetos, polimorfismo é recurso que permite que váriaveis
+ de um mesmo tipo mais genérico possam apontar para objetos de tipos especificos diferentes,
+ tendo assim comportamentos diferentes conforme cada tipo especifico.
+
+            # Importante entender #
+    • associação do tipo especifico com o tipo enérico é feita em tempo de execução (upcasting)
+    • O compilador não sabe para qual tipo especifico a chamada do método Withdraw
+    ..está sendo feita (ele só sabe que são duas variaveis tipo Account)
 
